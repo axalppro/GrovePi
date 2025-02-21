@@ -21,9 +21,9 @@
 # 	Doesn't support anything clever, cursors or anything
 
 import time,sys
+import smbus
 
 # I2C address of the LCD
-import smbus
 bus = smbus.SMBus(1)
 
 # this device has two I2C addresses
