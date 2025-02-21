@@ -22,17 +22,8 @@
 
 import time,sys
 
-if sys.platform == 'uwp':
-    import winrt_smbus as smbus
-    bus = smbus.SMBus(1)
-else:
-    import smbus
-    import RPi.GPIO as GPIO
-    rev = GPIO.RPI_REVISION
-    if rev == 2 or rev == 3:
-        bus = smbus.SMBus(1)
-    else:
-        bus = smbus.SMBus(0)
+# I2C address of the LCD
+bus = smbus.SMBus(1)
 
 # this device has two I2C addresses
 DISPLAY_RGB_ADDR = 0x62
