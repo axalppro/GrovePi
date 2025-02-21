@@ -23,6 +23,7 @@
 import time,sys
 
 # I2C address of the LCD
+import smbus
 bus = smbus.SMBus(1)
 
 # this device has two I2C addresses
